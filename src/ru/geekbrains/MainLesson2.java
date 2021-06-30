@@ -56,7 +56,7 @@ public class MainLesson2 {
     public static void printArray(int[][] arr) {
         for (int[] ints : arr) {
             for (int anInt : ints) {
-                System.out.println(anInt);
+                System.out.print(anInt);
             }
             System.out.println();
         }

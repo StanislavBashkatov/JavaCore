@@ -49,7 +49,6 @@ public class MainLesson2 {
             }
         }
 
-
         return arr;
     }
 

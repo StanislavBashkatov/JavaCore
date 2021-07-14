@@ -1,6 +1,6 @@
-package ru.geekbrains.Animal;
+package ru.geekbrains.Animal.Privte;
 
-public class Animal {
+public abstract class Animal {
 
     protected String name;
     protected String color;
@@ -19,6 +19,8 @@ public class Animal {
     public void swim(){
         System.out.println(name + "swim ");
     }
+
+    public abstract void voice();
 
 }
 

@@ -1,4 +1,4 @@
-package ru.geekbrains.Animal;
+package ru.geekbrains.Animal.Privte;
 
 public class Cat extends Animal {
     public Cat(String name, String color, int age) {
@@ -7,4 +7,9 @@ public class Cat extends Animal {
         this.age = age;
     }
 
+    @Override
+    public void voice() {
+        System.out.println("Cat " + name + " mau");
+
+    }
 }

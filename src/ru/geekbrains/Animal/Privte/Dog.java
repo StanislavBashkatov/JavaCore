@@ -1,4 +1,4 @@
-package ru.geekbrains.Animal;
+package ru.geekbrains.Animal.Privte;
 
 public class Dog extends Animal {
     public Dog(String name, String color, int age) {
@@ -8,4 +8,8 @@ public class Dog extends Animal {
 
     }
 
+    @Override
+    public void voice() {
+
+    }
 }

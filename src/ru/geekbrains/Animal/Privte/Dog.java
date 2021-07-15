@@ -1,15 +1,17 @@
 package ru.geekbrains.Animal.Privte;
 
 public class Dog extends Animal {
-    public Dog(String name, String color, int age) {
-        this.name = name;
-        this.color = color;
-        this.age = age;
+    private static int count;
 
+    public Dog(String name, int maxRun, int maxSwim) {
+        super(name, "Dog", maxRun,maxSwim);
+        count++;
+    }
+    public Dog(String name) {
+        super(name, "Dog", 500,40);
+        count++;
     }
 
-    @Override
-    public void voice() {
-
-    }
+    public static int getCount() {return count;}
 }
+

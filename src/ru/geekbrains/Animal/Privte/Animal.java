@@ -1,27 +1,62 @@
 package ru.geekbrains.Animal.Privte;
 
-public abstract class Animal {
+public class Animal {
 
     protected String name;
-    protected String color;
-    protected int age;
+    protected String type;
+    public static int count;
 
 
-    public void info() {
-        System.out.printf("%s %s %d \n", name, color, age);
+    int maxRun;
+    int maxSwim;
+
+    public Animal(String name, String type, int maxRun, int maxSwim) {
+        this.name = name;
+        this.type = type;
+        this.maxRun = maxRun;
+        this.maxSwim = maxSwim;
+
+        count++;
+
     }
 
-    public void jnmp(){
-        System.out.println(name + "jump! ");
+    public void run(int dist) {
+        if (maxRun == 0) {
+            System.out.printf("%s %s не умеет бежать\n", type, name);
+            return;
+        }
 
+        if (dist < 0) {
+            System.out.println("Введите положительное число");
+            return;
+        }
+
+        if (dist <= maxRun) {
+            System.out.printf("%s %s успешно пробежал %d метров\n", type, name, dist);
+        } else {
+            System.out.printf("%s %s не смог пробежать %d метров\n", type, name, dist);
+        }
     }
 
-    public void swim(){
-        System.out.println(name + "swim ");
+    public void swim(int dist) {
+        if (maxSwim == 0) {
+            System.out.printf("%s %s не умеет плавать\n", type, name);
+            return;
+        }
+
+        if (dist < 0) {
+            System.out.println("Введите положительное число");
+            return;
+        }
+
+        if (dist <= maxSwim) {
+            System.out.printf("%s %s успешно проплыл %d метров\n", type, name, dist);
+        } else {
+            System.out.printf("%s %s не смог проплыть %d метров\n", type, name, dist);
+        }
     }
-
-    public abstract void voice();
-
-}
-
+        public static int getCount () {
+            return count;
+        }
+    }
 

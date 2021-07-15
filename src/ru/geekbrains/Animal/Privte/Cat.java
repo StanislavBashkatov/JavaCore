@@ -1,15 +1,16 @@
 package ru.geekbrains.Animal.Privte;
 
 public class Cat extends Animal {
-    public Cat(String name, String color, int age) {
-        this.name =name;
-        this.color = color;
-        this.age = age;
-    }
+    private static int count;
 
-    @Override
-    public void voice() {
-        System.out.println("Cat " + name + " mau");
-
+    public Cat(String name, int maxRun, int maxSwim) {
+        super(name, "Cat", maxRun,maxSwim);
+        count++;
     }
+  public Cat(String name) {
+        super(name, "Cat", 200,0);
+        count++;
+  }
+
+  public static int getCount() {return count;}
 }
